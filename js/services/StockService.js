@@ -1,6 +1,5 @@
-import util from '../common/utils';
 import moment from 'moment';
-import mock from '../mock/recommendation'
+import mock from '../mock/recommendation';
 
 const defaultHeaders = {
     accept: 'application/json',
@@ -92,7 +91,7 @@ class StockService {
 
     getStockPrices(symbol, timeWindow) {
 
-        //MOCK HTTP REQUEST
+        // MOCK HTTP REQUEST
         const prices = mock.stockPriceGenerator(symbol, moment().subtract(timeWindow - 1, 'd'));
         return Promise.resolve(prices);
 
@@ -114,8 +113,9 @@ class StockService {
     }
 
     getSocialMediaCounts(symbol, provider, timeWindow) {
-        //MOCK HTTP REQUEST
-        const socialMediaCounts = mock.socialMediaCountGenerator(symbol, provider, moment().subtract(timeWindow - 1, 'd'));
+        // MOCK HTTP REQUEST
+        const socialMediaCounts =
+            mock.socialMediaCountGenerator(symbol, provider, moment().subtract(timeWindow - 1, 'd'));
         return Promise.resolve(socialMediaCounts);
 
         return this._plainRequest('POST', 'recommend', {
@@ -137,8 +137,7 @@ class StockService {
     }
 
     getStockRecommendation(symbol, provider, timeWindow, extraOptions, algorithm) {
-        
-        //MOCK HTTP REQUEST
+        // MOCK HTTP REQUEST
         return Promise.all([this.getStockPrices(symbol, timeWindow),
             this.getSocialMediaCounts(symbol, provider, timeWindow)])
             .then(results => {

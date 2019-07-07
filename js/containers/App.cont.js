@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as fetchHelper from '../common/fetchHelper';
-import { FetchDesc } from '../common/fetchDesc';
 import PropTypes from 'prop-types';
-import { hashHistory } from 'react-router';
 import * as appActions from '../actions/appActions';
-import { errorSendAction } from '../actions/errorActions';
 import services from '../services/serviceHolder';
 
 class App extends Component {

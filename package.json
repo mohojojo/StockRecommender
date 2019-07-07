@@ -1,7 +1,7 @@
 {
-  "name": "reactsampleapp",
-  "version": "1.0.0",
-  "description": "React Sample App",
+  "name": "stockmarketrecommender",
+  "version": "0.0.1",
+  "description": "Stock Market recommender based on Social Media topics",
   "author": "",
   "license": "MIT",
   "scripts": {
@@ -19,7 +19,6 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
-    "@date-io/moment": "0.0.2",
     "b_": "^1.3.4",
     "classnames": "^2.2.6",
     "concurrently": "^3.5.1",

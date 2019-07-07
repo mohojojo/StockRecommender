@@ -10,7 +10,7 @@ const mock = {
 
     stockPriceGenerator(symbol, date) {
         let prices = [];
-        const now = moment().add(1, 'days')
+        const now = moment().add(1, 'days');
 
         for (let m = date; !m.isSame(now, 'day'); m.add(1, 'days')) {
             prices.push({
@@ -25,7 +25,7 @@ const mock = {
 
     socialMediaCountGenerator(symbol, provider, date) {
         let counts = [];
-        const now = moment().add(1, 'days')
+        const now = moment().add(1, 'days');
 
         for (let m = date; !m.isSame(now, 'day'); m.add(1, 'days')) {
             counts.push({
@@ -41,15 +41,15 @@ const mock = {
 
     recommendationAlgorithm(prices, socialCounts) {
 
-        /// 0 = BUY, 1 = KEEP, 2 = SELL
+        // 0 = BUY, 1 = KEEP, 2 = SELL
         let recommendations = [];
 
-        for (let i = 0; i < prices.length; i++) {
+        for (let i = 0; i < prices.length; i += 1) {
             let recomm = 'Hold';
             if (prices[i].price > 300 && socialCounts[i].count > 50) {
                 recomm = 'Buy';
             } else if (prices[i].price > 500 && socialCounts[i].count > 50) {
-                recomm = 'Hold'
+                recomm = 'Hold';
             } else if (prices[i].price > 600 && socialCounts[i].count > 70) {
                 recomm = 'Sell';
             }
@@ -65,7 +65,7 @@ const mock = {
             });
         }
 
-        return recommendations
+        return recommendations;
     }
 };
 

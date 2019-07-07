@@ -19,7 +19,7 @@ class Dashboard extends React.Component {
 
     handleSearch(filters) {
         if (!filters.symbol) {
-            toast("Please enter a symbol!", {type: 'error'});
+            toast('Please enter a symbol!', { type: 'error' });
         } else {
             this.props.search(filters);
         }
@@ -35,7 +35,7 @@ class Dashboard extends React.Component {
                     <Header />
                 </header>
                 <section>
-                    <Filters search={(filters) => this.handleSearch(filters)}/>
+                    <Filters search={(filters) => this.handleSearch(filters)} />
                 </section>
                 <main>
                     {recommendationsMeta.isFetched ?
@@ -55,12 +55,12 @@ const mapStateToProps = state => {
         recommendations,
         recommendationsMeta: recommendations
             ? fetchHelper.getFetchMeta(recommendations) : {},
-    }
+    };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        search: (filters) => 
+        search: (filters) =>
             dispatch(stockActions.getStockRecommendation(filters.symbol, filters.provider, filters.timeWindow))
     };
 };

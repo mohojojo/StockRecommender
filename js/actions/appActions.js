@@ -1,7 +1,4 @@
 import { Action } from '../common/enums';
-import * as fetchHelper from '../common/fetchHelper';
-import { FetchDesc } from '../common/fetchDesc';
-import services from '../services/serviceHolder';
 
 // sets the loaded flag for the services
 export const setServicesLoaded = () => {

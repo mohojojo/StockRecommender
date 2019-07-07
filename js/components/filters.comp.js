@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import classnames from 'classnames';
 import bem from 'b_';
 
@@ -13,7 +13,7 @@ class Filters extends React.Component {
             provider: 'twitter',
             symbol: '',
             timeWindow: 10
-        }
+        };
     }
 
     filterChanged(e, field) {
@@ -27,18 +27,18 @@ class Filters extends React.Component {
         e.preventDefault();
     }
 
-    render () {
+    render() {
         return (
             <div className={b()}>
                 <form className='form' onSubmit={(e) => this.handleSubmit(e)}>
                     <div className='row'>
                         <div className={classnames('col', 'col-offset-25')}>
-                            <label htmlFor="symbol">Symbol</label>
+                            <label htmlFor='symbol'>Symbol</label>
                             <input id='symbol' className={classnames(b('symbol'), 'input-text')} placeholder={'Symbol'}
                                 value={this.state.symbol} onChange={(e) => this.filterChanged(e, 'symbol')}></input>
                         </div>
                         <div className={'col'}>
-                            <label htmlFor="provider">Provider</label>
+                            <label htmlFor='provider'>Provider</label>
                             <select id='provider' className={classnames(b('provider'), 'select')}
                                 onChange={(e) => this.filterChanged(e, 'provider')} value={this.state.provider}>
                                 <option value='twitter'>Twitter</option>
@@ -48,19 +48,20 @@ class Filters extends React.Component {
                             </select>
                         </div>
                         <div className={'col'}>
-                            <label htmlFor="time">Timewindow</label>
+                            <label htmlFor='time'>Timewindow</label>
                             <input id='time' type='number' placeholder='Time window' min={1}
                                 value={this.state.timeWindow} className={classnames(b('timewindow'), 'input-text')}
                                 onChange={(e) => this.filterChanged(e, 'timeWindow')}></input>
                             <span>days</span>
                         </div>
                         <div className={'col'}>
-                            <button type='submit' className={classnames(b('search-button'), 'primary-button')}>Search</button>
+                            <button type='submit'
+                                className={classnames(b('search-button'), 'primary-button')}>Search</button>
                         </div>
                     </div>
                 </form>
             </div>
-        )
+        );
     }
 }
 
