@@ -1,0 +1,230 @@
+// https://www.npmjs.com/package/eslint-plugin-react
+
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  // https://github.com/eslint/eslint/blob/master/conf/eslint-recommended.js
+  "extends": ["eslint:recommended"],
+  "rules": {
+
+    // basic rules ------------------------------------------------------------
+    "no-console": 0,
+    "no-debugger": 2,
+    "no-dupe-args": 2,
+    "no-dupe-keys": 2,
+    "no-duplicate-case": 2,
+    "no-empty": 2,
+    "no-extra-boolean-cast": 2,
+    //"no-extra-parens": 1,
+    "no-extra-semi": 2,
+    "no-irregular-whitespace": 1,
+    "no-sparse-arrays": 1,
+    "no-unexpected-multiline": 2,
+    "valid-jsdoc": 1,
+    "valid-typeof": 2,
+
+    // best practices ---------------------------------------------------------
+    "complexity": ["error", 10],  // 10 is the current maximum.
+    "curly": 2,
+    "default-case": 2,
+    //"dot-location": 1,  // maybe in the long run.
+    "dot-notation": 1,
+    "eqeqeq": 2,
+    "no-alert": 2,
+    "no-caller": 2,
+    "no-case-declarations": 2,
+    "no-else-return": 1,
+    "no-empty-pattern": 2,
+    "no-eq-null": 2,
+    "no-eval": 2,
+    "no-extra-bind": 2,
+    "no-fallthrough": 2,
+    "no-floating-decimal": 1,
+    "no-global-assign": 2,
+    "no-implicit-coercion": 2,
+    "no-implicit-globals": 2,
+    "no-implied-eval": 2,
+    "no-invalid-this": 2,
+    "no-lone-blocks": 2,
+    "no-loop-func": 2,
+    //"no-magic-numbers": 1,  // later.
+    "no-multi-spaces": 1,
+    "no-new": 2,
+    "no-new-func": 2,
+    "no-new-wrappers": 2,
+    "no-octal": 2,
+    "no-octal-escape": 2,
+    "no-return-assign": 2,
+    "no-script-url": 2,
+    "no-self-assign": 2,
+    "no-self-compare": 2,
+    "no-sequences": 2,
+    "no-unmodified-loop-condition": 2,
+    //"no-unused-expressions": 1,  // discuss.
+    "no-useless-call": 2,
+    "no-useless-escape": 1,
+    "no-useless-return": 2,
+    "no-void": 2,
+    "no-with": 2,
+    "radix": 2,
+    "wrap-iife": 1,
+
+    // variables --------------------------------------------------------------
+    "no-label-var": 2,
+    "no-shadow": 1,
+    "no-undef": 2,
+    "no-undef-init": 2,
+    //"no-undefined": 2,
+    "no-unused-vars": 2,
+
+    // stylistic --------------------------------------------------------------
+    "array-bracket-spacing": ["error", "never"],
+    "block-spacing": ["error", "always"],
+    "brace-style": "error",
+    "camelcase": ["error", { "properties": "always" }],
+    // "comma-dangle": "error",  // voting in progress...
+    "comma-spacing": "error",
+    "computed-property-spacing": ["error", "never"],
+    "consistent-this": ["error", "self"],
+    "eol-last": ["error", "always"],
+    "func-call-spacing": ["error", "never"],
+    "func-names": ["error", "as-needed"],
+    "indent": ["error", 4, {
+      "SwitchCase": 1
+    }],
+    "jsx-quotes": ["error", "prefer-single"],
+    "key-spacing": ["error", {
+      "beforeColon": false,
+      "afterColon": true
+    }],
+    "keyword-spacing": ["error", {
+      "before": true,
+      "after": true
+    }],
+    "linebreak-style": ["error", "unix"],
+    "max-depth": ["error", 4],
+    "max-len": ["error", { "code": 120, "ignoreRegExpLiterals": true }],
+    "max-lines": ["error", 1000],
+    "max-nested-callbacks": ["error", 4],
+    "max-statements-per-line": ["error", { "max": 1 }],
+    "new-cap": "error",
+    "new-parens": "error",
+    "no-lonely-if": "error",
+    "no-multiple-empty-lines": "error",
+    "no-new-object": "error",
+    "no-plusplus": "error",
+    "no-tabs": "error",
+    "no-trailing-spaces": "error",
+    "no-unneeded-ternary": "error",
+    "object-curly-spacing": [2, "always"],
+    "quote-props": ["error", "as-needed"],
+    "quotes": ["error", "single"],
+    "semi": "error",
+    "semi-spacing": "error",
+    "space-before-blocks": "error",
+    "space-before-function-paren": ["error", "never"],
+    "space-in-parens": ["error", "never"],
+    "space-infix-ops": "error",
+    "space-unary-ops": "error",
+    "spaced-comment": ["error", "always"],
+
+    // es6 --------------------------------------------------------------------
+    // TODO: continue...
+
+    // react ------------------------------------------------------------------
+    "react/display-name": 0, // Prevent missing displayName in a React component definition
+    "react/forbid-component-props": 0, // Forbid certain props on Components
+    "react/forbid-prop-types": 0, // Forbid certain propTypes
+    "react/jsx-boolean-value": 0, // Enforce boolean attributes notation in JSX (fixable)
+    "react/jsx-closing-bracket-location": 0, // Validate closing bracket location in JSX (fixable)
+    "react/jsx-curly-spacing": 2, // Enforce or disallow spaces inside of curly braces in JSX attributes (fixable)
+    "react/jsx-equals-spacing": 2, // Enforce or disallow spaces around equal signs in JSX attributes (fixable)
+    "react/jsx-filename-extension": 0, // Restrict file extensions that may contain JSX
+    "react/jsx-first-prop-new-line": 0, // Enforce position of the first prop in JSX (fixable)
+    "react/jsx-handler-names": 0, // Enforce event handler naming conventions in JSX
+    "react/jsx-indent": 0, // Validate JSX indentation
+    "react/jsx-indent-props": 0, // Validate props indentation in JSX (fixable)
+    "react/jsx-key": 2, // Validate JSX has key prop when in array or iterator
+    "react/jsx-max-props-per-line": 0, // Limit maximum of props on a single line in JSX
+    "react/jsx-no-bind": 0, // Prevent usage of .bind() and arrow functions in JSX props
+    "react/jsx-no-comment-textnodes": 0, // Prevent comments from being inserted as text nodes
+    "react/jsx-no-duplicate-props": 2, // Prevent duplicate props in JSX
+    "react/jsx-no-literals": 0, // Prevent usage of unwrapped JSX strings
+    "react/jsx-no-target-blank": 0, // Prevent usage of unsafe target='_blank'
+    "react/jsx-no-undef": 2, // Disallow undeclared variables in JSX
+    "react/jsx-pascal-case": 2, // Enforce PascalCase for user-defined JSX components
+    "react/jsx-sort-props": 0, // Enforce props alphabetical sorting
+    "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }], // Validate whitespace in and around the JSX opening and closing brackets (fixable)
+    "react/jsx-uses-react": 2, // Prevent React to be incorrectly marked as unused
+    "react/jsx-uses-vars": 2, // Prevent variables used in JSX to be incorrectly marked as unused
+    "react/jsx-wrap-multilines": 0, // Prevent missing parentheses around multilines JSX (fixable)
+    "react/no-children-prop": 0, // Prevent passing children as props
+    "react/no-danger": 2, // Prevent usage of dangerous JSX properties
+    "react/no-danger-with-children": 0, // Prevent problem with children and props.dangerouslySetInnerHTML
+    "react/no-deprecated": 1, // Prevent usage of deprecated methods
+    "react/no-did-mount-set-state": 0, // Prevent usage of setState in componentDidMount
+    "react/no-did-update-set-state": 0, // Prevent usage of setState in componentDidUpdate
+    "react/no-direct-mutation-state": 2, // Prevent direct mutation of this.state
+    "react/no-find-dom-node": 2, // Prevent usage of findDOMNode
+    "react/no-is-mounted": 2, // Prevent usage of isMounted
+    "react/no-multi-comp": 0, // Prevent multiple component definition per file
+    "react/no-render-return-value": 2, // Prevent usage of the return value of React.render
+    "react/no-set-state": 0, // Prevent usage of setState
+    "react/no-string-refs": 2, // Prevent using string references in ref attribute.
+    "react/no-unescaped-entities": 2, // Prevent invalid characters from appearing in markup
+    "react/no-unknown-property": [2, { "ignore": [] }], // Prevent usage of unknown DOM property (fixable)
+    "react/no-unused-prop-types": 0, // Prevent definitions of unused prop types
+    "react/prefer-es6-class": [2, "always"], // Enforce ES5 or ES6 class for React Components
+    "react/prefer-stateless-function": 2, // Enforce stateless React Components to be written as a pure function
+    "react/prop-types": 0, // Prevent missing props validation in a React component definition
+    "react/react-in-jsx-scope": 2, // Prevent missing React when using JSX
+    "react/require-extension": 0, // Restrict file extensions that may be required
+    "react/require-optimization": 0, // Enforce React components to have a shouldComponentUpdate method
+    "react/require-render-return": 2, // Enforce ES5 or ES6 class for returning value in render function
+    "react/self-closing-comp": 0, // Prevent extra closing tags for components without children (fixable)
+    "react/sort-comp": 0, // Enforce component methods order
+    "react/sort-prop-types": 0, // Enforce propTypes declarations alphabetical sorting
+    "react/style-prop-object": 0, // Enforce style prop value being an object
+    "react/no-array-index-key": 1, // Prevent using Array index in key props
+    "react/void-dom-elements-no-children": 2, // Prevent void DOM elements (e.g. <img />, <br />) from receiving children
+
+    // imports ----------------------------------------------------------------
+    "import/default": 0, // Ensure a default export is present, given a default import.
+    "import/export": 2, // Report any invalid exports, i.e. re-export of the same name
+    "import/extensions": 0, // Ensure consistent use of file extension within the import path
+    "import/first": 0, // Ensure all imports appear before other statements
+    "import/imports-first": 0, // Ensure all imports appear before other statements
+    "import/max-dependencies": 0, // Limit the maximum number of dependencies a module can have
+    "import/named": 2, // Ensure named imports correspond to a named export in the remote file.
+    "import/namespace": 0, // Ensure imported namespaces contain dereferenced properties as they are dereferenced.
+    "import/newline-after-import": 0, // Enforce a newline after import statements
+    "import/no-absolute-path": 0, // Forbid import of modules using absolute paths
+    "import/no-amd": 0, // Report AMD require and define calls.
+    "import/no-commonjs": 0, // Report CommonJS require calls and module.exports or exports.*.
+    "import/no-deprecated": 2, // Report imported names marked with @deprecated documentation tag
+    "import/no-duplicates": 0, // Report repeated import of the same module in multiple places
+    "import/no-dynamic-require": 0, // Forbid require() calls with expressions
+    "import/no-extraneous-dependencies": 0, // Forbid the use of extraneous packages
+    "import/no-internal-modules": 0, // Prevent importing the submodules of other modules
+    "import/no-mutable-exports": 2, // Forbid the use of mutable exports with var or let.
+    "import/no-named-as-default": 0, // Report use of exported name as identifier of default export
+    "import/no-named-as-default-member": 0, // Report use of exported name as property of default export
+    "import/no-named-default": 0, // Forbid named default exports
+    "import/no-namespace": 0, // Report namespace imports
+    "import/no-nodejs-modules": 0, // No Node.js builtin modules.
+    "import/no-restricted-paths": 0, // Restrict which files can be imported in a given folder
+    "import/no-unassigned-import": 0, // Forbid unassigned imports
+    "import/no-unresolved": 2, // Ensure imports point to a file/module that can be resolved.
+    "import/no-webpack-loader-syntax": 0, // Forbid Webpack loader syntax in imports
+    "import/order": 0, // Enforce a convention in module import order
+    "import/prefer-default-export": 0, // Prefer a default export if module exports a single name
+    "import/unambiguous": 0 // Report potentially ambiguous parse goal (script vs. module)
+  },
+  "plugins": [
+    "react",
+    "import"
+  ]
+}

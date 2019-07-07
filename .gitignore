@@ -1,0 +1,14 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+.DS_Store
+.idea
+node_modules
+npm-debug.log
+.sonar
+.scannerwork
+.coverage
+.snyk
+.jshintrc
+.vscode
+php/**/*.txt
+package-lock.json
+yarn.lock

@@ -1,0 +1,43 @@
+/** $define RecommendationList */
+
+.RecommendationList {
+    & table {
+        width: 100%;
+        border-collapse: collapse;
+
+        & td, th {
+            padding: 16px 16px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        & tbody {
+            & th {
+                font-size: 12px;
+                font-weight: bold;
+            }
+        }
+
+        & thead {
+
+            & th {
+                text-align: left;
+                color: rgba(0,0,0,0.85);
+                font-weight: 500;
+                text-align: left;
+                background: #fafafa;
+            }
+        }
+    }
+
+    &__recommendation {
+        &_recommendation_Buy {
+            color: green;
+        }
+        &_recommendation_Hold {
+            color: orange;
+        }
+        &_recommendation_Sell {
+            color: red;
+        }
+    }
+}
