@@ -15,7 +15,7 @@ const envConfigs = {
 
 const globalConfig = {
     // global
-    ENVIRONMENT: ENV
+    ENVIRONMENT: 'development'
 };
 
 const config = {
